@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Penisbasar – Marktplatz</title>
+  <meta name="theme-color" content="#0a0e16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Farbverlauf für das Diamant-Symbol (wird überall wiederverwendet) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="dia-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#c2fff9"/>
+        <stop offset=".5" stop-color="#4fe3d6"/>
+        <stop offset="1" stop-color="#1f9d94"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Kopfzeile -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#/" class="logo" aria-label="Penisbasar Startseite">
+        <span class="logo-mark">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="11.5" y="6" width="9" height="18" rx="4.5" fill="#8ff5ec"/>
+            <ellipse cx="16" cy="7.5" rx="5.5" ry="4.5" fill="#4fe3d6"/>
+            <circle cx="11" cy="24.5" r="5.5" fill="#3cc9be"/>
+            <circle cx="21" cy="24.5" r="5.5" fill="#1f9d94"/>
+          </svg>
+        </span>
+        <span class="logo-text">Penis<span>basar</span></span>
+      </a>
+
+      <form class="search search-top" data-search role="search">
+        <span data-icon="search"></span>
+        <input name="q" type="search" placeholder="Angebote durchsuchen…" autocomplete="off" aria-label="Angebote durchsuchen">
+      </form>
+
+      <nav class="top-actions">
+        <a href="#/verkaufen" class="btn btn-ghost btn-sm hide-sm"><span data-icon="plus"></span>Verkaufen</a>
+        <a href="#/bestellungen" class="icon-btn hide-sm" aria-label="Bestellungen">
+          <span data-icon="orders"></span><span class="badge badge-gold" data-orders-count hidden></span>
+        </a>
+        <div id="user-slot"></div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hier zeichnet app.js die jeweilige Seite hinein -->
+  <main id="app"></main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© Penisbasar · Der Marktplatz für unseren Server</span>
+      <span>Kein offizielles Minecraft-Produkt. Nicht mit Mojang oder Microsoft verbunden.</span>
+    </div>
+  </footer>
+
+  <!-- Untere Navigation (nur auf dem Handy sichtbar) -->
+  <nav class="bottom-nav" aria-label="Hauptnavigation">
+    <a href="#/" data-nav=""><span data-icon="store"></span>Markt</a>
+    <a href="#/verkaufen" data-nav="verkaufen"><span data-icon="plus"></span>Verkaufen</a>
+    <a href="#/bestellungen" data-nav="bestellungen"><span data-icon="orders"></span>Bestellungen<span class="badge badge-gold" data-orders-count hidden></span></a>
+    <button data-action="profile" data-nav="profil"><span data-icon="user"></span>Profil</button>
+  </nav>
+
+  <div id="modal-root"></div>
+  <div id="toasts" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/pixel.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
