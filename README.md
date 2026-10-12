@@ -3,7 +3,19 @@
 Angebote einstellen und reservieren – wie bei Vinted. Bezahlt wird mit Diamanten,
 übergeben wird im Spiel. Alle Spieler sehen denselben Marktplatz (Supabase-Datenbank).
 
+**Live:** https://dennismartens009-spec.github.io/penisbasar/
+
 **Einrichten & online stellen:** siehe [ANLEITUNG.md](ANLEITUNG.md).
+
+## Änderungen veröffentlichen
+
+Nach Änderungen an den Dateien im Terminal in diesem Ordner:
+
+```bash
+git add -A && git commit -m "Beschreibung der Änderung" && git push
+```
+
+GitHub Pages aktualisiert die Seite dann nach 1–2 Minuten automatisch.
 
 ## So funktioniert der Handel
 
